@@ -14,9 +14,37 @@ public class DefinitionsActivity extends AppCompatActivity {
         setContentView(R.layout.definitions_activity);
     }
 
+    public void activityGestaoAplicacao(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), GestaoAplicacaoActivity.class);
+        startActivity(intent1);
+
+    }
+
+    public void activityGestaoTempo(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), GestaoTempoActivity.class);
+        startActivity(intent1);
+
+    }
+
+    public void activityLocalMapas(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), LocalMapasActivity.class);
+        startActivity(intent1);
+
+    }
+
     public void activitySeguranca(View view){
 
         Intent intent1 = new Intent(getApplicationContext(), SecurityActivity.class);
+        startActivity(intent1);
+
+    }
+
+    public void activityAcerca(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), AcercaActivity.class);
         startActivity(intent1);
 
     }
