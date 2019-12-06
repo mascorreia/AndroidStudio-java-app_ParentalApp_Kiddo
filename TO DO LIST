@@ -1,0 +1,38 @@
+# TO DO:
+- Splash Screen                                       DONE
+- Definição de PIN para a app.
+- Gestão de utilizadores na inicialização             IN PROGRESS
+	- Perfis existentes
+	- Adicionar perfil
+- Launcher com as apps
+	- Ambiente de apps
+	- Botão ajuda + activity                            
+	- Botão sair + bloqueio com PIN
+	- Botão definições + bloqueio com PIN para acesso   IN PROGRESS
+		- Gestão de perfil                                IN PROGRESS
+		- Gestão da aplicações
+		- Gestão de tempo
+		- Localização e mapas                             IN PROGRESS
+		- Segurança
+		- Acerca
+
+- Jungle match (em react native)
+	- Splashscreen
+	- Menu
+	- Ambiente de jogo
+
+- Figurity
+	- Splashscreen                                    DONE
+	- Menu                                            DONE
+	- Ambiente de jogo com sensor                     IN PROGRESS
+
+- Poster
+
+
+
+
+Sites:
+criar round button - https://medium.com/@inibukanadit/androidstarter-1-i-want-a-round-button-636bc5553d6d
+exit app - https://www.instructables.com/id/HelloWorld-With-Exit-Button-AndroidStudio/
+Musica de fundo (implementar caso dê tempo) - https://www.youtube.com/watch?v=nwPmuIrrsoA
+
