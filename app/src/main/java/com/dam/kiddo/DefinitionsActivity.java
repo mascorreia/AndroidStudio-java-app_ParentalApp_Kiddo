@@ -20,4 +20,14 @@ public class DefinitionsActivity extends AppCompatActivity {
         startActivity(intent1);
 
     }
+
+    public void gestaoActivity(View view){
+        Intent intent2 = new Intent(getApplicationContext(), GestaoPerfil_Activity.class);
+        startActivity(intent2);
+    }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }
