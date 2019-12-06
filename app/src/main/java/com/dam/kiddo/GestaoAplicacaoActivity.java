@@ -20,4 +20,7 @@ public class GestaoAplicacaoActivity extends AppCompatActivity {
         startActivity(intent2);
 
     }
+
+    @Override
+    public void onBackPressed(){}
 }

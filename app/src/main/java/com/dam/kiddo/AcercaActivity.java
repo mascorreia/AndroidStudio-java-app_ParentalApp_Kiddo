@@ -20,4 +20,7 @@ public class AcercaActivity extends AppCompatActivity {
         startActivity(intent2);
 
     }
+
+    @Override
+    public void onBackPressed(){}
 }

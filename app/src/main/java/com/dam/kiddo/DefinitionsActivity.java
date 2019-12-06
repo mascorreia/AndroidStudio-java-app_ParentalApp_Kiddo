@@ -48,4 +48,15 @@ public class DefinitionsActivity extends AppCompatActivity {
         startActivity(intent1);
 
     }
+
+    public void voltarMainActivity(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent1);
+    }
+
+    @Override
+    public void onBackPressed(){}
+
+
 }
