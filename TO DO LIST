@@ -1,6 +1,6 @@
 # TO DO:
 - Splash Screen                                       DONE
-- Definição de PIN para a app.
+- Definição de PIN para a app.                        IN PROGRESS
 - Gestão de utilizadores na inicialização             IN PROGRESS
 	- Perfis existentes
 	- Adicionar perfil
@@ -12,7 +12,7 @@
 		- Gestão de perfil                                IN PROGRESS
 		- Gestão da aplicações
 		- Gestão de tempo
-		- Localização e mapas                             IN PROGRESS
+		- Localização e mapas                             IN PROGRESS(70%)
 		- Segurança
 		- Acerca
 
@@ -24,9 +24,9 @@
 - Figurity
 	- Splashscreen                                    DONE
 	- Menu                                            DONE
-	- Ambiente de jogo com sensor                     IN PROGRESS
+	- Ambiente de jogo com sensor                     IN PROGRESS (10%)
 
-- Poster
+- Poster                                                  IN PROGRESS(95%)
 
 
 
@@ -34,5 +34,5 @@
 Sites:
 criar round button - https://medium.com/@inibukanadit/androidstarter-1-i-want-a-round-button-636bc5553d6d
 exit app - https://www.instructables.com/id/HelloWorld-With-Exit-Button-AndroidStudio/
-Musica de fundo (implementar caso dê tempo) - https://www.youtube.com/watch?v=nwPmuIrrsoA
+Musica de fundo dos jogos (implementar caso dê tempo) - https://www.youtube.com/watch?v=nwPmuIrrsoA
 
