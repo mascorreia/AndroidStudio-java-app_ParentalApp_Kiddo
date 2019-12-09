@@ -18,5 +18,10 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="info_saved">Data was saved</string>
 
+    <!-- PinActivity -->
+    <string name="pin_content_desc">PIN input field</string>
+    <string name="pin_label_text">PIN</string>
+    <string name="forget_pin">Esqueceu-se do PIN?</string>
+
 
 </resources>

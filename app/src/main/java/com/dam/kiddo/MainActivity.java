@@ -16,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void voltarDefinicoes(View view){
 
-        Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);
-        startActivity(intent2);
+        Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
+        startActivity(intent2);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
 
     }
-
+    
     @Override
     public void onBackPressed(){}
 }
