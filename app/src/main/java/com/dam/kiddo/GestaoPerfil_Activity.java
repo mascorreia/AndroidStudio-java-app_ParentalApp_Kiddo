@@ -1,12 +1,18 @@
 package com.dam.kiddo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -179,6 +185,59 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
             }
         }
     }
+
+
+
+
+    private void pedirImagemComPermissoes(){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage(R.string.dialog_read_file_permission)
+                            .setCancelable(false)
+                            .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    pedirPermissoes();
+                                }
+                            });
+                builder.create().show();
+            }else {
+                pedirPermissoes();
+            }
+        }else{
+            pedirImagem();
+        }
+    }
+
+
+    private void pedirPermissoes() {
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSÃO_LER_FICHEIROS);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[]
+            grantResults) {
+        switch (requestCode) {
+            case PERMISSÃO_LER_FICHEIROS: {
+                //Se o pedido foi cancelado, o array de resultados está vazio.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //Permissão aceite.
+                    Toast.makeText(this, R.string.toast_read_file_permission_granted,
+                            Toast.LENGTH_SHORT).show();
+                    //Lançar o pedido de escolha de imagem.
+                    pedirImagem();
+                } else {
+                    //Permissão rejeitada, não poderá alterar a sua imagem de perfil.
+                    Toast.makeText(this, R.string.toast_read_file_permission_denied,
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
+
 
     public void voltarDefinicoes(View view){
 
