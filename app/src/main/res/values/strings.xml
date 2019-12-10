@@ -31,5 +31,14 @@
     <string name="can_not_get_pin_info">Impossivel obter informação acerca do PIN</string>
     <string name="recover_PIN">Recuperar PIN</string>
 
+    <!--GestaoPerfil_Activity -->
+    <string name="dialog_read_file_permission">Please allow the application to read your files so
+    that it can import profile images.</string>
+    <string name="toast_read_file_permission_granted">The application can access your
+    files.</string>
+    <string name="toast_read_file_permission_denied">You did not allow the application to read
+    your file so you will not be able to set a profile image.</string>
+    <string name="dialog_ok">OK</string>
+
 
 </resources>
