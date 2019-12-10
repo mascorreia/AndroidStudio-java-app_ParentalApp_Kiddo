@@ -14,6 +14,12 @@ public class DefinitionsActivity extends AppCompatActivity {
         setContentView(R.layout.definitions_activity);
     }
 
+    public void activityGestaoPerfil(View view){
+        Intent intent1 = new Intent(getApplicationContext(),GestaoPerfil_Activity.class);
+        startActivity(intent1);
+    }
+
+
     public void activityGestaoAplicacao(View view){
 
         Intent intent1 = new Intent(getApplicationContext(), GestaoAplicacaoActivity.class);

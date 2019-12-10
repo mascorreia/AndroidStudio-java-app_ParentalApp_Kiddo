@@ -4,31 +4,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.text.InputType;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.Calendar;
 
 public class GestaoPerfil_Activity extends AppCompatActivity {
-
-    private android.preference.PreferenceManager PreferenceManager;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gestao_perfil);
-    }
-
     private static final String VALOR_NOME = "NOME";
     private static final String VALOR_CAMINHO_FOTO = "PHOTO_PATH";
 
@@ -36,15 +37,76 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
     private static final int IMAGE_PICKER_SELECT = 1001;
 
     private String photoPath;
-    private String imagePath;
 
-    /*Button buttonGuardar = (Button)findViewById(R.id.buttonSave);
-    buttonGuardar.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            guardarValores();
-        }
-    });*/
+
+
+    //Date
+    private static final String TAG = "GestaoPerfilActivitity";
+    private TextView mDisplayDate;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
+
+
+
+
+    private android.preference.PreferenceManager PreferenceManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_gestao_perfil);
+        lerValores();
+
+
+        Button buttonSave = (Button)findViewById(R.id.buttonSave);
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                guardarValores();
+            }
+
+
+        });
+
+        //associar o método carregarImagem() no clique na imageView (prop. isClickable = true)
+        ImageView imgView = findViewById(R.id.imagePhoto);
+        imgView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pedirImagem();
+            }
+        });
+
+        //Date
+        mDisplayDate = (TextView)findViewById(R.id.txtDate);
+
+        mDisplayDate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(GestaoPerfil_Activity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, mDateSetListener, year, month, day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                month = month + 1;
+                Log.d(TAG, "onDateSet: dd/mm/yyyy: " + day + "/" + month + "/" + year);
+
+                String date =  day  + "/" + month + "/" + year;
+                mDisplayDate.setText(date);
+            }
+        };
+
+
+
+    }
 
 
 
@@ -66,7 +128,7 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
         carregarImagem(photoPath);
     }
 
-    private void guardarValores(){
+    public void guardarValores(){
 
         EditText editNome = findViewById(R.id.editNome);
         String nome = editNome.getText().toString();
@@ -108,7 +170,7 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
     private void carregarImagem(String imagePath){
         ImageView imgView = findViewById(R.id.imagePhoto);
         if(imagePath.length() == 0){
-            imgView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.background, null));
+            imgView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.avatar, null));
         }else {
             File imgFile = new File(imagePath);
             if (imgFile.exists()){
@@ -117,6 +179,8 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
             }
         }
     }
+
+
 
 
 }
