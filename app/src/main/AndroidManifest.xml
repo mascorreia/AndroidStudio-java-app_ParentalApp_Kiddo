@@ -13,8 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".LauncherAppsActivity"></activity>
-        <activity android:name=".PinFragment" />
+        <activity android:name=".PinFragment"></activity>
         <activity android:name=".PinActivity" />
         <activity android:name=".AcercaActivity" />
         <activity android:name=".LocalMapasActivity" />

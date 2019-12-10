@@ -10,7 +10,9 @@
         android:id="@+id/logoKiddo2"
         android:layout_width="109dp"
         android:layout_height="90dp"
+        android:layout_alignParentEnd="true"
         android:layout_marginTop="644dp"
+        android:layout_marginEnd="160dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,7 +22,10 @@
         android:id="@+id/textView"
         android:layout_width="215dp"
         android:layout_height="39dp"
-        android:layout_marginTop="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="81dp"
         android:text="Gestão de Perfil"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,6 +37,7 @@
         android:id="@+id/imagePhoto"
         android:layout_width="75dp"
         android:layout_height="72dp"
+<<<<<<< Updated upstream
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="48dp"
@@ -43,18 +49,32 @@
         android:focusable="auto"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
+=======
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="288dp"
+        android:clickable="true"
+        android:focusable="auto"
+>>>>>>> Stashed changes
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/avatar" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="118dp"
         android:layout_height="54dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="188dp"
-        android:text="@string/attachment_summary_on"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="295dp"
+        android:text="Editar Perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,33 +109,44 @@
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="140dp"
-        android:layout_height="53dp"
-        android:layout_marginBottom="38dp"
-        android:text=" Confirmar alterações"
+        android:layout_height="58dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="293dp"
+        android:onClick="guardarValores"
+        android:text="Confirmar alterações"
         app:layout_constraintBottom_toTopOf="@+id/divider2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.645"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/button"
+        tools:ignore="OnClick" />
 
     <TextView
         android:id="@+id/editarFoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="51dp"
         android:layout_marginTop="9dp"
-        android:layout_marginEnd="311dp"
+        android:layout_marginBottom="512dp"
         android:text="Editar foto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagePhoto" />
 
+
     <EditText
         android:id="@+id/editNome"
-        android:layout_width="wrap_content"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="23dp"
         android:layout_marginTop="144dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="448dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,44 +157,37 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="457dp"
         android:text="Editar nome"
         app:layout_constraintEnd_toStartOf="@+id/editNome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editarFoto" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginBottom="98dp"
-        android:text="Data de nascimento"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.193" />
-
-    <EditText
-        android:id="@+id/editDate"
-        android:layout_width="96dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="64dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="390dp"
+        android:hint="Selecione a data" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="55dp"
         android:layout_height="33dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="293dp"
+        android:layout_marginBottom="650dp"
         android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintHorizontal_bias="1.0"
@@ -174,12 +198,32 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="71dp"
-        android:layout_height="103dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="41dp"
+        android:layout_height="78dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="336dp"
+        android:layout_marginEnd="-264dp"
+        android:layout_marginBottom="580dp"
+        android:layout_toStartOf="@+id/textView"
         app:layout_constraintBottom_toTopOf="@+id/imagePhoto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/iconfinder_arrow_left2_1814084" />
 
+<<<<<<< Updated upstream
+=======
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="239dp"
+        android:layout_marginBottom="390dp"
+        android:text="Data de Nascimento" />
+
+>>>>>>> Stashed changes
 </RelativeLayout>
