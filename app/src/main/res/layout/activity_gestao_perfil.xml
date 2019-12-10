@@ -37,11 +37,8 @@
         android:id="@+id/imagePhoto"
         android:layout_width="75dp"
         android:layout_height="72dp"
-<<<<<<< Updated upstream
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="157dp"
         android:layout_marginBottom="207dp"
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
@@ -49,16 +46,11 @@
         android:focusable="auto"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp"
-=======
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="48dp"
         android:layout_marginTop="125dp"
         android:layout_marginEnd="288dp"
-        android:clickable="true"
-        android:focusable="auto"
->>>>>>> Stashed changes
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
@@ -211,8 +203,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/iconfinder_arrow_left2_1814084" />
 
-<<<<<<< Updated upstream
-=======
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -224,6 +214,4 @@
         android:layout_marginEnd="239dp"
         android:layout_marginBottom="390dp"
         android:text="Data de Nascimento" />
-
->>>>>>> Stashed changes
 </RelativeLayout>

@@ -46,4 +46,8 @@ public class LauncherAppsActivity extends AppCompatActivity implements MyRecycle
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
+    @Override
+    public void onBackPressed(){}
+
 }

@@ -126,4 +126,8 @@ public class PinActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_view, fragment).commit();
     }
+
+    @Override
+    public void onBackPressed(){}
+
 }
