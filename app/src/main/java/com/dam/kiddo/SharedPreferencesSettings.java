@@ -18,6 +18,6 @@ public class SharedPreferencesSettings {
         final SharedPreferences sharedPref = context.getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE);
         final String defaultValue = "";
         return sharedPref.getString("code", defaultValue);
-
     }
+
 }

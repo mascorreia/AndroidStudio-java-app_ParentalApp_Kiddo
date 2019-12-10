@@ -3,7 +3,7 @@
 
     <style name="PFLockScreenButtonStyle">
         <!-- Customize your theme here. -->
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:background">@drawable/ripple_selector_key_pf</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
