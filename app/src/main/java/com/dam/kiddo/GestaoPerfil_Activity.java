@@ -180,6 +180,12 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
         }
     }
 
+    public void voltarDefinicoes(View view){
+
+        Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);
+        startActivity(intent2);
+
+    }
 
 
 
