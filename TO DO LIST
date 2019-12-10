@@ -1,6 +1,7 @@
 # TO DO:
 - Splash Screen                                       DONE
-- Definição de PIN para a app.                        IN PROGRESS
+- Definição de PIN para a app.                        DONE
+- Desbloqueio com PIN.                                DONE (falta recuperar PIN)
 - Gestão de utilizadores na inicialização             IN PROGRESS
 	- Perfis existentes
 	- Adicionar perfil
@@ -8,7 +9,7 @@
 	- Ambiente de apps
 	- Botão ajuda + activity                            
 	- Botão sair + bloqueio com PIN
-	- Botão definições + bloqueio com PIN para acesso   IN PROGRESS
+	- Botão definições + bloqueio com PIN para acesso         IN PROGRESS
 		- Gestão de perfil                                IN PROGRESS
 		- Gestão da aplicações
 		- Gestão de tempo
