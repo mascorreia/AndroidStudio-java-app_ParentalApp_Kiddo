@@ -1,7 +1,6 @@
 package com.dam.kiddo;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
@@ -15,7 +14,7 @@ public class PinFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.activity_main, container, false);
+        final View view = inflater.inflate(R.layout.activity_gestao_utilizadores, container, false);
         return view;
     }
 }
