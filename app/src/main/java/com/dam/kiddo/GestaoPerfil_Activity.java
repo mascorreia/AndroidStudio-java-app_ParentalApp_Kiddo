@@ -78,7 +78,7 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
         imgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pedirImagem();
+                pedirImagemComPermissoes();
             }
         });
 
@@ -109,8 +109,7 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
                 mDisplayDate.setText(date);
             }
         };
-
-
+        
 
     }
 
@@ -165,6 +164,11 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
             String[] filePathColumn = {MediaStore.Images.Media.DATA};
             Cursor cursor = GestaoPerfil_Activity.this.getContentResolver().query(selectedImage,
                     filePathColumn, null, null, null);
+            if(cursor == null){
+                System.out.println("imagem nao carregada");
+            }else{
+                System.out.println("imagem carregada");
+            }
             cursor.moveToFirst();
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
             photoPath = cursor.getString(columnIndex);
