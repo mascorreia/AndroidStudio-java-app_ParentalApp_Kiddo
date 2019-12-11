@@ -27,18 +27,18 @@ public class InstalledAppsAdapter extends RecyclerView.Adapter<InstalledAppsAdap
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView mTextViewLabel;
-        public TextView mTextViewPackage;
+        //public TextView mTextViewPackage;
         public ImageView mImageViewIcon;
-        public CheckBox mAppSelect;
+        //public CheckBox mAppSelect;
         public RelativeLayout mItem;
 
         public ViewHolder(View v) {
             super(v);
             // Get the widgets reference from custom layout
             mTextViewLabel = (TextView) v.findViewById(R.id.Apk_Name);
-            mTextViewPackage = (TextView) v.findViewById(R.id.Apk_Package_Name);
+            //mTextViewPackage = (TextView) v.findViewById(R.id.Apk_Package_Name);
             mImageViewIcon = (ImageView) v.findViewById(R.id.packageImage);
-            mAppSelect = (CheckBox) v.findViewById(R.id.appSelect);
+            //mAppSelect = (CheckBox) v.findViewById(R.id.appSelect);
             mItem = (RelativeLayout) v.findViewById(R.id.item);
         }
 
@@ -67,12 +67,12 @@ public class InstalledAppsAdapter extends RecyclerView.Adapter<InstalledAppsAdap
         holder.mTextViewLabel.setText(label);
 
         // Set the current app package name
-        holder.mTextViewPackage.setText(packageName);
+        //holder.mTextViewPackage.setText(packageName);
 
         // Set the current app icon
         holder.mImageViewIcon.setImageDrawable(icon);
 
-        holder.mAppSelect.setChecked(mDataSet.get(position).isSelected());
+        //holder.mAppSelect.setChecked(mDataSet.get(position).isSelected());
 
         holder.mItem.setOnClickListener(new View.OnClickListener() {
             @Override

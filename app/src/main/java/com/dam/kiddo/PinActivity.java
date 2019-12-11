@@ -46,16 +46,16 @@ public class PinActivity extends AppCompatActivity {
                 public void onCodeInputSuccessful() {
                     Toast.makeText(PinActivity.this, getString(R.string.code_success_welcome), Toast.LENGTH_SHORT).show();
                     showMainFragment();
-                    Intent intent2 = new Intent(getApplicationContext(), GestaoUtilizadoresActivity.class);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
-                    startActivity(intent2);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
+                    Intent intent2 = new Intent(getApplicationContext(), LauncherAppsActivity.class);//NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
+                    startActivity(intent2);//NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
                 }
 
                 @Override
                 public void onFingerprintSuccessful() {
                     Toast.makeText(PinActivity.this, getString(R.string.fingerprint_welcome), Toast.LENGTH_SHORT).show();
                     showMainFragment();
-                    Intent intent2 = new Intent(getApplicationContext(), GestaoUtilizadoresActivity.class); //REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
-                    startActivity(intent2);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
+                    Intent intent2 = new Intent(getApplicationContext(), LauncherAppsActivity.class); //NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
+                   startActivity(intent2);//NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
                 }
 
                 @Override

@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme"
 
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".LauncherAppsActivity"></activity>
+        <activity android:name=".LauncherAppsActivity"/>
         <activity android:name=".GestaoPerfil_Activity" />
         <activity android:name=".PinFragment" />
         <activity android:name=".PinActivity" />
@@ -31,11 +31,6 @@
         <activity
             android:name=".GestaoUtilizadoresActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SplashActivity"

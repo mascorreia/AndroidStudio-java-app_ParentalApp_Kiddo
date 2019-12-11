@@ -48,8 +48,6 @@ public class AppsManager {
         });
 
     }
-
-
     // Custom method to get application icon by package name
     private Drawable getAppIconByPackageName(String packageName) {
         Drawable icon;
