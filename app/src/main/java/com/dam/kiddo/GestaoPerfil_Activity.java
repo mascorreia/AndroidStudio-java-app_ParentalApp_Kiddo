@@ -109,7 +109,7 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
                 mDisplayDate.setText(date);
             }
         };
-        
+
 
     }
 
