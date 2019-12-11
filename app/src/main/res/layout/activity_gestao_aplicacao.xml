@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GestaoAplicacaoActivity">
-
-    <ImageView
-        android:id="@+id/logoKiddo"
-        android:layout_width="120dp"
-        android:layout_height="88dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="335dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="3dp"
-        android:contentDescription="kiddo_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kiddos_logo" />
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/divider"
@@ -34,6 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
         android:id="@+id/voltar"
         android:layout_width="43dp"
@@ -41,13 +28,17 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="13dp"
-        android:layout_marginEnd="103dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="355dp"
         android:layout_marginBottom="589dp"
         android:contentDescription="voltar"
         android:onClick="voltarDefinicoes"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@mipmap/voltar_atras" />
 
     <TextView
@@ -56,14 +47,56 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="117dp"
 
+        android:layout_marginBottom="16dp"
         android:contentDescription="gestao_aplicacoes"
         android:text="Gestão de Aplicações"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="358dp"
+        android:layout_height="387dp"
+        android:layout_marginBottom="172dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- <android.support.v7.widget.RecyclerView
+             android:id="@+id/recycleView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:layout_editor_absoluteX="8dp"
+             tools:layout_editor_absoluteY="8dp" />-->
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_confirm_apps"
+        android:layout_width="117dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
+        android:text="Gravar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.504" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

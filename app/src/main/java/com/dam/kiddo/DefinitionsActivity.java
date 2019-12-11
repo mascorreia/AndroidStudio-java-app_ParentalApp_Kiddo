@@ -22,7 +22,7 @@ public class DefinitionsActivity extends AppCompatActivity {
 
     public void activityGestaoAplicacao(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), GestaoAplicacaoActivity.class);
+        Intent intent1 = new Intent(getApplicationContext(), GestaoAplicacoesActivity.class);
         startActivity(intent1);
 
     }
@@ -57,7 +57,7 @@ public class DefinitionsActivity extends AppCompatActivity {
 
     public void voltarMainActivity(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent1 = new Intent(getApplicationContext(), GestaoUtilizadoresActivity.class);
         startActivity(intent1);
     }
 
