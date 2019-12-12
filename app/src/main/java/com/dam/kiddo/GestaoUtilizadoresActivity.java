@@ -28,7 +28,7 @@ public class GestaoUtilizadoresActivity extends AppCompatActivity {
 
     public void addUser(View view){
 
-        Intent intent2 = new Intent(getApplicationContext(), AdicionarPerfilActivity.class);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
+        Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
         startActivity(intent2);//REMOVER DEPOIS DE IMPLEMENTAR LAUNCHER
 
     }

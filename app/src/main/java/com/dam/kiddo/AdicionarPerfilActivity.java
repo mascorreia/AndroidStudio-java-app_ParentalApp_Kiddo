@@ -1,16 +1,19 @@
 package com.dam.kiddo;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
@@ -168,6 +171,27 @@ public class AdicionarPerfilActivity extends AppCompatActivity {
             }
         }else{
             pedirImagem();
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == IMAGE_PICKER_SELECT && resultCode == Activity.RESULT_OK) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = {MediaStore.Images.Media.DATA};
+            Cursor cursor = AdicionarPerfilActivity.this.getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            if(cursor == null){
+                System.out.println("imagem nao carregada");
+            }else{
+                System.out.println("imagem carregada");
+            }
+            cursor.moveToFirst();
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            photoPath = cursor.getString(columnIndex);
+            cursor.close();
+            carregarImagem(photoPath);
         }
     }
 
