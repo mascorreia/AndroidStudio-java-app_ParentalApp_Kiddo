@@ -30,8 +30,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="166dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginEnd="161dp"
         android:layout_marginBottom="481dp"
         android:background="@drawable/rounded_button"
         android:contentDescription="adic_util"
@@ -42,6 +42,19 @@
         app:layout_constraintTop_toBottomOf="@+id/imgLogo"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="103dp"
+        android:layout_height="97dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="242dp"
+        android:layout_marginBottom="370dp"
+        android:onClick="launchAct"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <!--android:onClick="voltarDefinicoes"-->
 </RelativeLayout>
