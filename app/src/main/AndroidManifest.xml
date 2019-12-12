@@ -28,6 +28,7 @@
         <activity android:name=".GestaoTempoActivity" />
         <activity android:name=".SecurityActivity" />
         <activity android:name=".DefinitionsActivity" />
+        <activity android:name=".AdicionarPerfilActivity" />
         <activity
             android:name=".GestaoUtilizadoresActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

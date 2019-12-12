@@ -20,9 +20,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
-import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -83,7 +81,7 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
         });
 
         //Date
-        mDisplayDate = (TextView)findViewById(R.id.txtDate);
+        mDisplayDate = (TextView)findViewById(R.id.txtData);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -5,16 +5,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="255dp"
-        android:layout_marginBottom="517dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -36,7 +26,7 @@
         android:text="Nome" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -58,7 +48,7 @@
         android:text="Data de Nascimento" />
 
     <TextView
-        android:id="@+id/txtDate"
+        android:id="@+id/txtDataNasc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -69,14 +59,14 @@
 
     <Button
         android:id="@+id/btAdd"
-        android:layout_width="121dp"
-        android:layout_height="wrap_content"
+        android:layout_width="163dp"
+        android:layout_height="67dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="241dp"
+        android:layout_marginStart="198dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="249dp"
+        android:layout_marginBottom="230dp"
         android:text="Confirmar" />
 
     <TextView
@@ -89,25 +79,45 @@
         android:layout_marginBottom="339dp"
         android:text="Género" />
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="155dp"
-        android:layout_marginBottom="333dp"
-        android:text="Masculino" />
+    <RadioGroup
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/a"
+
+        android:layout_width="174dp"
+
+        android:layout_height="101dp"
+
+        android:layout_alignParentStart="true"
+
         android:layout_alignParentEnd="true"
+
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="332dp"
-        android:text="Feminino" />
+
+        android:layout_marginStart="155dp"
+
+        android:layout_marginEnd="82dp"
+
+        android:layout_marginBottom="267dp"
+
+        android:onClick="onRGClick"
+
+        android:orientation="vertical">
+
+
+        <RadioButton
+            android:id="@+id/a1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/a2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+
+
+    </RadioGroup>
 
     <TextView
         android:id="@+id/textView8"
@@ -121,6 +131,28 @@
         android:layout_marginEnd="80dp"
         android:text="Adicionar Utilizador"
         android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="96dp"
+        android:layout_height="122dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="73dp"
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp"
+        android:clickable="true"
+        android:focusable="auto"
+        android:topLeftRadius="10dp"
+        android:topRightRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/adic_user" />
 
 
 </RelativeLayout>

@@ -5,6 +5,6 @@
     <color name="code_lock_screen_pf">#141414</color>
     <color name="white_selector_pf">#66ffffff</color>
     <color name="hint_color">#42000000</color>
-    <color name="warning_color">#f4511e</color>
+    <color name="warning_color">#F4511E</color>
     <color name="success_color">#009688</color>
 </resources>
