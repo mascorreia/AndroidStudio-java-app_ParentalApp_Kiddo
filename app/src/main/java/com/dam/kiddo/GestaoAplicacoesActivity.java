@@ -32,7 +32,6 @@ public class GestaoAplicacoesActivity extends AppCompatActivity {
 
         installedApps = new ArrayList<AppInfo>();
         mRecyclerView = (RecyclerView) findViewById(R.id.recycleView);
-        //shareButton = (FloatingActionButton) findViewById(R.id.sharebutton);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
         appManager = new AppsManager(this);
@@ -43,7 +42,19 @@ public class GestaoAplicacoesActivity extends AppCompatActivity {
                 getApplicationContext(),
                 installedApps
         );
+        /* //filter system apps
+        PackageManager manager = getPackageManager();
+        List<PackageInfo> availableActivities = manager.getInstalledPackages(0);
 
+        for(PackageInfo packageInfo : availableActivities) {
+
+            if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 1) {
+                continue;
+            }
+            else {
+                //Installed Apps
+            }
+        }*/
 
         mRecyclerView.setAdapter(mAdapter);
 

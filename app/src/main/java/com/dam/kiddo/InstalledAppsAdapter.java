@@ -81,8 +81,6 @@ public class InstalledAppsAdapter extends RecyclerView.Adapter<InstalledAppsAdap
                 InstalledAppsAdapter.this.notifyDataSetChanged();
             }
         });
-
-
     }
 
     @Override
