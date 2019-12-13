@@ -10,12 +10,12 @@
 	- Botão ajuda + activity                            
 	- Botão sair + bloqueio com PIN
 	- Botão definições + bloqueio com PIN para acesso         IN PROGRESS
-		- Gestão de perfil                                IN PROGRESS
+		- Gestão de perfil                                DONE
 		- Gestão da aplicações                            IN PROGRESS
-		- Gestão de tempo                                 IN PROGRESS
+		- Gestão de tempo                                 DONE (falta colocar em todas as activities)
 		- Localização e mapas                             IN PROGRESS(70%)
 		- Segurança
-		- Acerca
+		- Acerca                                          DONE
 
 - Jungle match (em react native)
 	- Splashscreen

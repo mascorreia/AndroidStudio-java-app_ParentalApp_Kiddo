@@ -37,6 +37,7 @@ public class GestaoUtilizadoresActivity extends AppCompatActivity {
             int resId = bundle.getInt("resId");
             i1.setImageResource(resId);
         }
+
     }
 
 

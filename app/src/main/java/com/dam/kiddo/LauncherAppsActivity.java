@@ -15,8 +15,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,18 +40,18 @@ public class LauncherAppsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_launcher_apps);
 
         userInstalledApps = findViewById(R.id.installed_app_list);
-
-        installedApps = getInstalledApps();
+        installedApps = getInstalledApps(); //Log.d("myTag", "INFO: " + installedApps);
         installedAppAdapter = new AppAdapter(LauncherAppsActivity.this, installedApps);
         userInstalledApps.setAdapter(installedAppAdapter);
         userInstalledApps.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
 
-
                 Intent intent = getPackageManager().getLaunchIntentForPackage(installedApps.get(i).packages);
                 if(intent != null){ //Log.d("myTag", "INFO: " + intent);
                     startActivity(intent);
+                }else {
+                    Toast.makeText(LauncherAppsActivity.this, installedApps.get(i).packages + " Error, Please Try Again...", Toast.LENGTH_SHORT).show();
                 }/*
                 String[] colors = {" Open App", " App Info"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(LauncherAppsActivity.this);
@@ -87,7 +89,7 @@ public class LauncherAppsActivity extends AppCompatActivity {
 
     }
 
-    private List<AppList> getInstalledApps() {
+    public List<AppList> getInstalledApps() {
         PackageManager pm = getPackageManager();
         List<AppList> apps = new ArrayList<AppList>();
         List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
@@ -158,6 +160,8 @@ public class LauncherAppsActivity extends AppCompatActivity {
         class ViewHolder{
             TextView textInListView;
             ImageView imageInListView;
+            CheckBox mAppSelect;
+            RelativeLayout mItem;
             //TextView packageInListView;
         }
     }
@@ -166,6 +170,8 @@ public class LauncherAppsActivity extends AppCompatActivity {
         private String name;
         Drawable icon;
         private String packages;
+        private boolean isSelected;
+
         public AppList(String name, Drawable icon, String packages) {
             this.name = name;
             this.icon = icon;
@@ -179,6 +185,12 @@ public class LauncherAppsActivity extends AppCompatActivity {
         }
         public String getPackages() {
             return packages;
+        }
+        public boolean isSelected() {
+            return isSelected;
+        }
+        public void setSelected(boolean selected) {
+            isSelected = selected;
         }
 
     }
