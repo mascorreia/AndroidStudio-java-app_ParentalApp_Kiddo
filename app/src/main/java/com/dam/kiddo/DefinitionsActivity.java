@@ -61,6 +61,11 @@ public class DefinitionsActivity extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    public void closeApplication(View view) {
+        finish();
+        moveTaskToBack(true);
+    }
+
     @Override
     public void onBackPressed(){}
 
