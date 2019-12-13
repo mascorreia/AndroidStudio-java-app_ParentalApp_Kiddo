@@ -35,6 +35,7 @@
         android:layout_marginBottom="481dp"
         android:background="@drawable/rounded_button"
         android:contentDescription="adic_util"
+        android:onClick="addUser"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,14 +45,14 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="103dp"
-        android:layout_height="97dp"
+        android:layout_width="86dp"
+        android:layout_height="98dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="66dp"
-        android:layout_marginEnd="242dp"
-        android:layout_marginBottom="370dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="369dp"
         android:onClick="launchAct"
         tools:srcCompat="@tools:sample/avatars" />
 

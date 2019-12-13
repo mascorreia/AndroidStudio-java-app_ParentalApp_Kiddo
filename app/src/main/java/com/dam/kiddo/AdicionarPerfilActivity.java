@@ -102,19 +102,15 @@ public class AdicionarPerfilActivity extends AppCompatActivity {
 
     public void send(View view){
         Intent i = new Intent(AdicionarPerfilActivity.this, GestaoUtilizadoresActivity.class);
-        i.putExtra("resId", R.drawable.avatar);
+        i.putExtra("resId", (R.drawable.avatar));
         startActivity(i);
     }
 
     private void lerValores(){
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
         String nomeGuardado = sharedPref.getString(VALOR_NOME, "");
-
         photoPath = sharedPref.getString(VALOR_CAMINHO_FOTO, "");
-
         EditText editNome = findViewById(R.id.txtNome);
-
         editNome.setText(nomeGuardado);
         carregarImagem(photoPath);
     }

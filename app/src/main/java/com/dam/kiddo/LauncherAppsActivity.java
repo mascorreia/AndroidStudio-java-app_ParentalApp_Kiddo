@@ -50,7 +50,11 @@ public class LauncherAppsActivity extends AppCompatActivity {
                 Intent intent = getPackageManager().getLaunchIntentForPackage(installedApps.get(i).packages);
                 if(intent != null){ //Log.d("myTag", "INFO: " + intent);
                     startActivity(intent);
-                }/*
+                }
+                else {
+                    Toast.makeText(LauncherAppsActivity.this, installedApps.get(i).packages + " Error, Please Try Again...", Toast.LENGTH_SHORT).show();
+                }
+                /*
                 String[] colors = {" Open App", " App Info"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(LauncherAppsActivity.this);
                 builder
