@@ -21,7 +21,6 @@ public class PinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin);
         showLockScreenFragment();
-        //PFSecurityManager.getInstance().setPinCodeHelper(new com.dam.kiddo.TestPFPinCodeHelperImpl());
     }
 
     private final PFLockScreenFragment.OnPFLockScreenCodeCreateListener mCodeCreateListener = new PFLockScreenFragment.OnPFLockScreenCodeCreateListener() {
@@ -32,23 +31,19 @@ public class PinActivity extends AppCompatActivity {
             showLockScreenFragment();
         }
 
-       //@Override
+       @Override
         public void onNewCodeValidationFailed() {
             Toast.makeText(PinActivity.this, getString(R.string.code_definition_error), Toast.LENGTH_SHORT).show();
         }
     };
-
-
 
     private final PFLockScreenFragment.OnPFLockScreenLoginListener mLoginListener = new PFLockScreenFragment.OnPFLockScreenLoginListener() {
         @Override
         public void onCodeInputSuccessful() {
             Toast.makeText(PinActivity.this, getString(R.string.code_success_welcome), Toast.LENGTH_SHORT).show();
             showMainFragment();
-
-            Intent intent2 = new Intent(getApplicationContext(), /*GestaoUtilizadoresActivity*/GestaoUtilizadoresActivity.class); //
+            Intent intent2 = new Intent(getApplicationContext(), GestaoUtilizadoresActivity.class);
             startActivity(intent2);
-
         }
 
         @Override
@@ -92,7 +87,6 @@ public class PinActivity extends AppCompatActivity {
     private void showLockScreenFragment(boolean isPinExist) {
         final PFFLockScreenConfiguration.Builder builder = new PFFLockScreenConfiguration.Builder(this)
                 .setTitle(isPinExist ? "Desloquear com PIN ou Impressão digital" : "Definir PIN")
-                //.setTitle("Desbloquear")
                 .setUseFingerprint(true)
                 .setMode(PFFLockScreenConfiguration.MODE_AUTH)
                 .setCodeLength(4) //min 4 ; max 6
@@ -103,7 +97,6 @@ public class PinActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(PinActivity.this, "Left button pressed", Toast.LENGTH_LONG).show();
-                //ABRIR ACTIVITY PARA RECUPERAR PIN através de SMS
             }
         });
 

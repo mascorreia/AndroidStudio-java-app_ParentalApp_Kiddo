@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -71,45 +70,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.968" />
-
-    <!--<FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="313dp"
-        android:layout_height="485dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <ListView
-            android:id="@+id/installed_app_list_gest"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:paddingLeft="80dip"
-            android:paddingTop="40dip"
-            android:paddingRight="80dip"
-            android:paddingBottom="70dp"
-            android:textSize="18sp">
-
-        </ListView>
-
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/sharebutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_margin="16dp"
-            android:clickable="true"
-            app:elevation="6dp"
-            app:fabSize="normal"
-
-            app:srcCompat="@android:drawable/ic_menu_share" />
-
-
-    </FrameLayout>-->
 
     <LinearLayout
         android:layout_width="267dp"

@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.app.AlertDialog;
-
+import android.view.View;
 
 
 
@@ -48,7 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        mo = new MarkerOptions().position(new LatLng(0, 0)).title("A minha localização atual");
+        mo = new MarkerOptions().position(new LatLng(38.524400, -8.888200)).title("A minha localização atual");
         if(Build.VERSION.SDK_INT >= 23 && !isPermissionGranted()){
             requestPermissions(PERMISSIONS, PERMISSION_ALL);
         } else requestLocation();
@@ -60,7 +60,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         marker =  mMap.addMarker(mo);
-
 
     }
 
@@ -153,6 +152,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 });
         dialog.show();
+    }
+
+    public void voltarDefinicoes(View view){
+
+        Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);
+        startActivity(intent2);
+
     }
 }
 

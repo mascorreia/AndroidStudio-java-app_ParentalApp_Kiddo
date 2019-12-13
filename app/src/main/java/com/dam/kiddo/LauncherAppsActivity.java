@@ -18,11 +18,9 @@ import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -40,7 +38,7 @@ public class LauncherAppsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_launcher_apps);
 
         userInstalledApps = findViewById(R.id.installed_app_list);
-        installedApps = getInstalledApps(); //Log.d("myTag", "INFO: " + installedApps);
+        installedApps = getInstalledApps();
         installedAppAdapter = new AppAdapter(LauncherAppsActivity.this, installedApps);
         userInstalledApps.setAdapter(installedAppAdapter);
         userInstalledApps.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -48,52 +46,20 @@ public class LauncherAppsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, final int i, long l) {
 
                 Intent intent = getPackageManager().getLaunchIntentForPackage(installedApps.get(i).packages);
-                if(intent != null){ //Log.d("myTag", "INFO: " + intent);
+                if(intent != null){
                     startActivity(intent);
                 }else {
                     Toast.makeText(LauncherAppsActivity.this, installedApps.get(i).packages + " Error, Please Try Again...", Toast.LENGTH_SHORT).show();
-                }/*
-                String[] colors = {" Open App", " App Info"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(LauncherAppsActivity.this);
-                builder
-                        //.setTitle("Choose Action")
-                        .setItems(colors, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // The 'which' argument contains the index position of the selected item
-                                if (which==0){
-                                    Intent intent = getPackageManager().getLaunchIntentForPackage(installedApps.get(i).packages);
-                                    if(intent != null){ Log.d("myTag", "INFO: " + intent);
-                                        startActivity(intent);
-                                    }
-                                    else {
-                                        Toast.makeText(LauncherAppsActivity.this, installedApps.get(i).packages + " Error, Please Try Again...", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                                if (which==1){
-                                    Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS); Log.d("myTag", "INTENT INFO?: " + intent);
-                                    intent.setData(Uri.parse("package:" + installedApps.get(i).packages));
-                                    Toast.makeText(LauncherAppsActivity.this, installedApps.get(i).packages, Toast.LENGTH_SHORT).show();
-                                    startActivity(intent);
-                                }
-                            }
-                        });
-                builder.show();
-            */}
+                }}
         });
 
-        //Total Number of Installed-Apps(i.e. List Size)
         String  abc = userInstalledApps.getCount()+"";
-        //TextView countApps = (TextView)findViewById(R.id.countApps);
-        //countApps.setText("Total Installed Apps: "+abc);
-        //Toast.makeText(this, abc+" Apps", Toast.LENGTH_SHORT).show();
-
     }
 
     public List<AppList> getInstalledApps() {
         PackageManager pm = getPackageManager();
         List<AppList> apps = new ArrayList<AppList>();
         List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
-        //List<PackageInfo> packs = getPackageManager().getInstalledPackages(PackageManager.GET_PERMISSIONS);
         for (int i = 0; i < packs.size(); i++) {
             PackageInfo p = packs.get(i);
             if ((!isSystemPackage(p))) {
@@ -143,16 +109,14 @@ public class LauncherAppsActivity extends AppCompatActivity {
                 listViewHolder = new ViewHolder();
                 convertView = layoutInflater.inflate(R.layout.installed_app_list, parent, false);
 
-                listViewHolder.textInListView = (TextView)convertView.findViewById(R.id.list_app_name);
-                listViewHolder.imageInListView = (ImageView)convertView.findViewById(R.id.app_icon);
-                //listViewHolder.packageInListView=(TextView)convertView.findViewById(R.id.app_package);
+                listViewHolder.textInListView = convertView.findViewById(R.id.list_app_name);
+                listViewHolder.imageInListView = convertView.findViewById(R.id.app_icon);
                 convertView.setTag(listViewHolder);
             }else{
                 listViewHolder = (ViewHolder)convertView.getTag();
             }
             listViewHolder.textInListView.setText(listStorage.get(position).getName());
             listViewHolder.imageInListView.setImageDrawable(listStorage.get(position).getIcon());
-            //listViewHolder.packageInListView.setText(listStorage.get(position).getPackages());
 
             return convertView;
         }
@@ -161,32 +125,10 @@ public class LauncherAppsActivity extends AppCompatActivity {
             TextView textInListView;
             ImageView imageInListView;
             CheckBox mAppSelect;
-            RelativeLayout mItem;
-            //TextView packageInListView;
         }
     }
 
-    public void voltarDefinicoes(View view){
-
-        Intent intent2 = new Intent(getApplicationContext(), PinActivity.class);
-        startActivity(intent2);
-
-    }
-
-    public void irDefinicoes(View view){
-
-        Intent intent1 = new Intent(getApplicationContext(), PinActivity2.class);
-        startActivity(intent1);
-    }
-
-    public void activityAjuda(View view){
-
-        Intent intent1 = new Intent(getApplicationContext(), AjudaActivity.class);
-        startActivity(intent1);
-
-    }
-
-    public class AppList {
+    public static class AppList {
         private String name;
         Drawable icon;
         private String packages;
@@ -214,4 +156,22 @@ public class LauncherAppsActivity extends AppCompatActivity {
         }
 
     }
+
+    public void openDefenitions(View view){
+        Intent intent = new Intent(getApplicationContext(), PinActivity2.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
+    }
+
+    public void activityAjuda(View view){
+        Intent intent = new Intent(getApplicationContext(), AjudaActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
+    }
+
+
+
+    @Override
+    public void onBackPressed(){}
+
 }

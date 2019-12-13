@@ -8,6 +8,21 @@
 
 
     <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:contentDescription="voltar"
+        android:onClick="voltarDefinicoes"
+        android:src="@mipmap/voltar_atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046"
+        app:srcCompat="@mipmap/voltar_atras" />
+
+    <ImageView
         android:id="@+id/logoKiddo2"
         android:layout_width="109dp"
         android:layout_height="90dp"
@@ -149,23 +164,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.554" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="47dp"
-        android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046"
-        app:srcCompat="@drawable/iconfinder_user_285655"
-        tools:srcCompat="@drawable/iconfinder_user_285655" />
 
     <TextView
         android:id="@+id/textView2"

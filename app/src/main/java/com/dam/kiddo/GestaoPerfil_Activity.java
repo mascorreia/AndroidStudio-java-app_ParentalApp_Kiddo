@@ -248,7 +248,4 @@ public class GestaoPerfil_Activity extends AppCompatActivity {
         startActivity(intent2);
 
     }
-
-
-
 }

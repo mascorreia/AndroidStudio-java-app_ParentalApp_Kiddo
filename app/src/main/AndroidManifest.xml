@@ -29,27 +29,43 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".MapsActivity"/>
-        <activity android:name=".LauncherAppsActivity" />
-        <activity android:name=".GestaoPerfil_Activity" />
-        <activity android:name=".PinFragment" />
-        <activity android:name=".PinActivity" />
-        <activity android:name=".PinActivity2" />
-        <activity android:name=".AcercaActivity" />
-        <activity android:name=".GestaoAplicacoesActivity" />
-        <activity android:name=".LocalMapasActivity" />
-        <activity android:name=".GestaoTempoActivity" />
-        <activity android:name=".SecurityActivity" />
-        <activity android:name=".DefinitionsActivity" />
-        <activity android:name=".AdicionarPerfilActivity" />
-        <activity android:name=".AjudaActivity"/>
-
+        <activity android:name=".MapsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LauncherAppsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GestaoPerfil_Activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PinFragment"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PinActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AcercaActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AjudaActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PinActivity2"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PinActivity3"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GestaoAplicacoesActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GestaoTempoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".DefinitionsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".AdicionarPerfilActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".GestaoUtilizadoresActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

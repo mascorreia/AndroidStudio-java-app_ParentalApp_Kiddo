@@ -29,14 +29,16 @@ public class DefinitionsActivity extends AppCompatActivity {
 
     public void activityGestaoTempo(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), GestaoTempoActivity.class);
-        startActivity(intent1);
+        Intent i = new Intent(DefinitionsActivity.this, GestaoTempoActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
+        startActivity(i);
 
     }
 
     public void activityLocalMapas(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), LocalMapasActivity.class);
+        Intent intent1 = new Intent(getApplicationContext(), MapsActivity.class);
         startActivity(intent1);
 
     }
@@ -57,8 +59,10 @@ public class DefinitionsActivity extends AppCompatActivity {
 
     public void voltarMainActivity(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), PinActivity2.class);
-        startActivity(intent1);
+        Intent i = new Intent(DefinitionsActivity.this, LauncherAppsActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
+        startActivity(i);
     }
 
     public void irDefinicoes(View view){

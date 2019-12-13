@@ -38,13 +38,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="382dp"
+        android:layout_height="495dp"
         android:orientation="vertical">
 
         <ListView
             android:id="@+id/installed_app_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="552dp"
             android:gravity="center"
             android:paddingLeft="80dip"
             android:paddingTop="40dip"
@@ -70,9 +70,9 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="230dp"
+        android:layout_width="69dp"
         android:layout_height="55dp"
-        android:onClick="irDefinicoes"
+        android:onClick="openDefenitions"
         android:paddingLeft="20dip"
         app:srcCompat="@drawable/btn_definicoes" />
 

@@ -185,7 +185,7 @@ public class GestaoTempoActivity extends Activity {
             @Override
             public void onFinish() {
                 setProgress(progress, endTime);
-                Intent i = new Intent(getApplicationContext(), PinActivity.class);
+                Intent i = new Intent(getApplicationContext(), PinActivity3.class);
                 startActivity(i);
             }
         };
@@ -232,8 +232,10 @@ public class GestaoTempoActivity extends Activity {
 
     public void voltarDefinicoes(View view){
 
-        Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);
-        startActivity(intent2);
+        Intent i = new Intent(GestaoTempoActivity.this, DefinitionsActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
+        startActivity(i);
 
     }
 
