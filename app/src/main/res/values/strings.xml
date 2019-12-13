@@ -10,6 +10,14 @@
     <string name="signature_title">A tua assinatura</string>
     <string name="reply_title">Ação de resposta por omissão</string>
 
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sincronizar email periodicamente</string>
+    <string name="attachment_title">Download de anexos recebidos</string>
+    <string name="attachment_summary_on">Faça o download automático de anexos para e-mails recebidos
+    </string>
+    <string name="attachment_summary_off">Faça o download de anexos somente quando solicitado manualmente</string>
+    <string name="info_saved">Data was saved</string>
+
     <!-- PinActivity -->
     <string name="pin_content_desc">PIN input field</string>
     <string name="pin_label_text">PIN</string>
@@ -29,7 +37,7 @@
     <string name="toast_read_file_permission_granted">A aplicação pode aceder ao seu
     ficheiros.</string>
     <string name="toast_read_file_permission_denied">Você não permitiu que a aplicação lesse
-    seu arquivo para que defina uma imagem de perfil.</string>
+    seu arquivo para que você não seja capaz de definir uma imagem de perfil.</string>
     <string name="dialog_ok">OK</string>
 
 
