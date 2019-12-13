@@ -17,10 +17,10 @@
 		- Segurança
 		- Acerca                                          DONE
 
-- Jungle match (em react native)
-	- Splashscreen
-	- Menu
-	- Ambiente de jogo
+- Jogo do Galo (em react native)
+	- Splashscreen 					NOT NECESSARY
+	- Menu 						NOT NECESSARY
+	- Ambiente de jogo				DONE
 
 - Figurity
 	- Splashscreen                                    DONE
