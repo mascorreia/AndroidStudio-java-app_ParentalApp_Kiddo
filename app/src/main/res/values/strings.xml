@@ -10,14 +10,6 @@
     <string name="signature_title">A tua assinatura</string>
     <string name="reply_title">Ação de resposta por omissão</string>
 
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="info_saved">Data was saved</string>
-
     <!-- PinActivity -->
     <string name="pin_content_desc">PIN input field</string>
     <string name="pin_label_text">PIN</string>
@@ -29,15 +21,15 @@
     <string name="pin_failed">PIN introduzido incorreto</string>
     <string name="fingerprint_failed">Impressão digital inválida</string>
     <string name="can_not_get_pin_info">Impossivel obter informação acerca do PIN</string>
-    <string name="recover_PIN">Recuperar PIN</string>
+    <string name="recover_PIN"> </string>
 
     <!--GestaoPerfil_Activity -->
-    <string name="dialog_read_file_permission">Please allow the application to read your files so
-    that it can import profile images.</string>
-    <string name="toast_read_file_permission_granted">The application can access your
-    files.</string>
-    <string name="toast_read_file_permission_denied">You did not allow the application to read
-    your file so you will not be able to set a profile image.</string>
+    <string name="dialog_read_file_permission">Por favor, permita que a aplicação leia os seus ficheiros para que
+    possa importar imagens.</string>
+    <string name="toast_read_file_permission_granted">A aplicação pode aceder ao seu
+    ficheiros.</string>
+    <string name="toast_read_file_permission_denied">Você não permitiu que a aplicação lesse
+    seu arquivo para que defina uma imagem de perfil.</string>
     <string name="dialog_ok">OK</string>
 
 

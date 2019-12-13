@@ -8,15 +8,73 @@
     tools:context=".DefinitionsActivity">
 
     <Button
+        android:id="@+id/btnSair"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="128dp"
+        android:background="@drawable/rounded_button_time"
+        android:onClick="closeApplication"
+        android:text="Sair"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSegurança"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="272dp"
+        android:background="@drawable/rounded_button_time"
+        android:onClick="activitySeguranca"
+        android:text="Segurança"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLocalMapas"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="344dp"
+        android:background="@drawable/rounded_button_time"
+        android:onClick="activityLocalMapas"
+        android:text="Localização e mapas"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGestaoTempo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="412dp"
+        android:background="@drawable/rounded_button_time"
+        android:onClick="activityGestaoTempo"
+        android:text="Gestão de Tempo"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/btnGestãoAplicacao"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="492dp"
-        android:text="Gestão de Aplicações"
+        android:layout_marginBottom="480dp"
+        android:background="@drawable/rounded_button_time"
         android:onClick="activityGestaoAplicacao"
+        android:text="Gestão de Aplicações"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -24,68 +82,24 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginBottom="552dp"
+        android:background="@drawable/rounded_button_time"
         android:onClick="activityGestaoPerfil"
         android:text="Gestão de Perfil"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnGestaoTempo"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="432dp"
-        android:text="Gestão de Tempo"
-        android:onClick="activityGestaoTempo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnLocalMapas"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="372dp"
-        android:text="Localização e mapas"
-        android:onClick="activityLocalMapas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnSegurança"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="312dp"
-        android:text="Segurança"
-        android:onClick="activitySeguranca"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnAcerca"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="252dp"
-        android:text="Acerca"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/rounded_button_time"
         android:onClick="activityAcerca"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnSair"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="184dp"
-        android:onClick="closeApplication"
-        android:text="Sair"
+        android:text="Acerca"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
