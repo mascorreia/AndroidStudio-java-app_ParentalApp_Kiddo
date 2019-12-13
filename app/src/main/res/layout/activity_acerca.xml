@@ -10,8 +10,10 @@
         android:id="@+id/logoKiddo"
         android:layout_width="120dp"
         android:layout_height="88dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="146dp"
         android:layout_marginTop="335dp"
         android:layout_marginEnd="145dp"
         android:layout_marginBottom="3dp"
@@ -64,4 +66,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="150dp">
+
+            <TextView
+                android:id="@+id/titleWindow"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp" />
+
+            <TextView
+                android:id="@+id/messageWindow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/titleWindow" />
+
+        </RelativeLayout>
+    </ScrollView>
+
 </RelativeLayout>
+
+
+
