@@ -61,42 +61,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="358dp"
-        android:layout_height="387dp"
-        android:layout_marginBottom="172dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <!-- <android.support.v7.widget.RecyclerView
-             android:id="@+id/recycleView"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:layout_editor_absoluteX="8dp"
-             tools:layout_editor_absoluteY="8dp" />-->
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycleView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
-
     <Button
         android:id="@+id/btn_confirm_apps"
         android:layout_width="117dp"
         android:layout_height="48dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="14dp"
         android:text="Gravar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

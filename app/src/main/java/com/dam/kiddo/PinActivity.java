@@ -24,50 +24,47 @@ public class PinActivity extends AppCompatActivity {
         //PFSecurityManager.getInstance().setPinCodeHelper(new com.dam.kiddo.TestPFPinCodeHelperImpl());
     }
 
-    private final PFLockScreenFragment.OnPFLockScreenCodeCreateListener mCodeCreateListener =
-            new PFLockScreenFragment.OnPFLockScreenCodeCreateListener() {
-                @Override
-                public void onCodeCreated(String encodedCode) {
-                    Toast.makeText(PinActivity.this, getString(R.string.pin_defined), Toast.LENGTH_SHORT).show();
-                    SharedPreferencesSettings.saveToPref(PinActivity.this, encodedCode);
-                    showLockScreenFragment();
-                }
+    private final PFLockScreenFragment.OnPFLockScreenCodeCreateListener mCodeCreateListener = new PFLockScreenFragment.OnPFLockScreenCodeCreateListener() {
+        @Override
+        public void onCodeCreated(String encodedCode) {
+            Toast.makeText(PinActivity.this, getString(R.string.pin_defined), Toast.LENGTH_SHORT).show();
+            SharedPreferencesSettings.saveToPref(PinActivity.this, encodedCode);
+            showLockScreenFragment();
+        }
 
-               //@Override
-                public void onNewCodeValidationFailed() {
-                    Toast.makeText(PinActivity.this, getString(R.string.code_definition_error), Toast.LENGTH_SHORT).show();
-                }
-            };
+       //@Override
+        public void onNewCodeValidationFailed() {
+            Toast.makeText(PinActivity.this, getString(R.string.code_definition_error), Toast.LENGTH_SHORT).show();
+        }
+    };
 
-    private final PFLockScreenFragment.OnPFLockScreenLoginListener mLoginListener =
-            new PFLockScreenFragment.OnPFLockScreenLoginListener() {
+    private final PFLockScreenFragment.OnPFLockScreenLoginListener mLoginListener = new PFLockScreenFragment.OnPFLockScreenLoginListener() {
+        @Override
+        public void onCodeInputSuccessful() {
+            Toast.makeText(PinActivity.this, getString(R.string.code_success_welcome), Toast.LENGTH_SHORT).show();
+            showMainFragment();
+            Intent intent2 = new Intent(getApplicationContext(), LauncherAppsActivity.class);//Launcher Activity
+            startActivity(intent2);
+        }
 
-                @Override
-                public void onCodeInputSuccessful() {
-                    Toast.makeText(PinActivity.this, getString(R.string.code_success_welcome), Toast.LENGTH_SHORT).show();
-                    showMainFragment();
-                    Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);//NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
-                    startActivity(intent2);//NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
-                }
+        @Override
+        public void onFingerprintSuccessful() {
+            Toast.makeText(PinActivity.this, getString(R.string.fingerprint_welcome), Toast.LENGTH_SHORT).show();
+            showMainFragment();
+            Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class); //NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
+           startActivity(intent2);//NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
+        }
 
-                @Override
-                public void onFingerprintSuccessful() {
-                    Toast.makeText(PinActivity.this, getString(R.string.fingerprint_welcome), Toast.LENGTH_SHORT).show();
-                    showMainFragment();
-                    Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class); //NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
-                   startActivity(intent2);//NO FINAL COLOCAR ACTIVITY GESTAO DE UTILIZADORES
-                }
+        @Override
+        public void onPinLoginFailed() {
+            Toast.makeText(PinActivity.this, getString(R.string.pin_failed), Toast.LENGTH_SHORT).show();
+        }
 
-                @Override
-                public void onPinLoginFailed() {
-                    Toast.makeText(PinActivity.this, getString(R.string.pin_failed), Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onFingerprintLoginFailed() {
-                    Toast.makeText(PinActivity.this, getString(R.string.fingerprint_failed), Toast.LENGTH_SHORT).show();
-                }
-            };
+        @Override
+        public void onFingerprintLoginFailed() {
+            Toast.makeText(PinActivity.this, getString(R.string.fingerprint_failed), Toast.LENGTH_SHORT).show();
+        }
+    };
 
     private void showLockScreenFragment() {
         new PFPinCodeViewModel().isPinCodeEncryptionKeyExist().observe(

@@ -15,49 +15,12 @@ import java.util.ArrayList;
 
 public class GestaoAplicacoesActivity extends AppCompatActivity {
 
-    private RelativeLayout mRelativeLayout;
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private RecyclerView.Adapter mAdapter;
-    private ArrayList<AppInfo> installedApps;
-    private FloatingActionButton shareButton;
-    private AppsManager appManager;
-    private final String baseURL = "http://192.168.50.48/post.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestao_aplicacao);
-
-        installedApps = new ArrayList<AppInfo>();
-        mRecyclerView = (RecyclerView) findViewById(R.id.recycleView);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(layoutManager);
-        appManager = new AppsManager(this);
-        installedApps = appManager.getApps();
-
-        // Initialize a new adapter for RecyclerView
-        mAdapter = new InstalledAppsAdapter(
-                getApplicationContext(),
-                installedApps
-        );
-        /* //filter system apps
-        PackageManager manager = getPackageManager();
-        List<PackageInfo> availableActivities = manager.getInstalledPackages(0);
-
-        for(PackageInfo packageInfo : availableActivities) {
-
-            if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 1) {
-                continue;
-            }
-            else {
-                //Installed Apps
-            }
-        }*/
-
-        mRecyclerView.setAdapter(mAdapter);
-
     }
 
     public void voltarDefinicoes(View view){
