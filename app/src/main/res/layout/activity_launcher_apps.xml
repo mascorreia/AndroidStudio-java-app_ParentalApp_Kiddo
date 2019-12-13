@@ -23,7 +23,8 @@
                 android:layout_width="90dp"
                 android:layout_height="50dp"
                 android:layout_gravity="left"
-                app:srcCompat="@drawable/btn_help" />
+                app:srcCompat="@drawable/btn_help"
+                android:onClick="activityAjuda"/>
 
             <ImageView
                 android:id="@+id/imageView6"

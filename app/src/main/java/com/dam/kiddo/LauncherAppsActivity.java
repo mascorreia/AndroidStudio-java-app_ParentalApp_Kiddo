@@ -179,6 +179,13 @@ public class LauncherAppsActivity extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    public void activityAjuda(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), AjudaActivity.class);
+        startActivity(intent1);
+
+    }
+
     public class AppList {
         private String name;
         Drawable icon;

@@ -42,6 +42,7 @@
         <activity android:name=".SecurityActivity" />
         <activity android:name=".DefinitionsActivity" />
         <activity android:name=".AdicionarPerfilActivity" />
+        <activity android:name=".AjudaActivity"/>
 
         <activity
             android:name=".GestaoUtilizadoresActivity"
