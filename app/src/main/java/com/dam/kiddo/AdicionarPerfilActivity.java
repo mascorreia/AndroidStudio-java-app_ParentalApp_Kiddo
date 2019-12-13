@@ -12,13 +12,16 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -31,7 +34,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.nio.ByteBuffer;
 import java.util.Calendar;
 
 public class AdicionarPerfilActivity extends AppCompatActivity {
@@ -49,22 +54,13 @@ public class AdicionarPerfilActivity extends AppCompatActivity {
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_perfil);
         lerValores();
 
-
-        Button buttonSave = (Button)findViewById(R.id.btAdd);
-        buttonSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                guardarValores();
-            }
-
-
-        });
 
         //associar o método carregarImagem() no clique na imageView (prop. isClickable = true)
         ImageView imgView = findViewById(R.id.avatar);
@@ -85,7 +81,6 @@ public class AdicionarPerfilActivity extends AppCompatActivity {
                 int year = cal.get(Calendar.YEAR);
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
-
                 DatePickerDialog dialog = new DatePickerDialog(AdicionarPerfilActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth, mDateSetListener, year, month, day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
@@ -102,6 +97,13 @@ public class AdicionarPerfilActivity extends AppCompatActivity {
                 mDisplayDate.setText(date);
             }
         };
+    }
+
+
+    public void send(View view){
+        Intent i = new Intent(AdicionarPerfilActivity.this, GestaoUtilizadoresActivity.class);
+        i.putExtra("resId", R.drawable.avatar);
+        startActivity(i);
     }
 
     private void lerValores(){
