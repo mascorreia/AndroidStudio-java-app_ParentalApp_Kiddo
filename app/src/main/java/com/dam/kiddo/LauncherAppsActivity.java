@@ -166,6 +166,19 @@ public class LauncherAppsActivity extends AppCompatActivity {
         }
     }
 
+    public void voltarDefinicoes(View view){
+
+        Intent intent2 = new Intent(getApplicationContext(), PinActivity.class);
+        startActivity(intent2);
+
+    }
+
+    public void irDefinicoes(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), PinActivity2.class);
+        startActivity(intent1);
+    }
+
     public class AppList {
         private String name;
         Drawable icon;

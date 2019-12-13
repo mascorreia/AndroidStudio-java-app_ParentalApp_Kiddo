@@ -1,20 +1,20 @@
 package com.dam.kiddo;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 
 import com.beautycoder.pflockscreen.PFFLockScreenConfiguration;
 import com.beautycoder.pflockscreen.fragments.PFLockScreenFragment;
 import com.beautycoder.pflockscreen.security.PFResult;
 import com.beautycoder.pflockscreen.viewmodels.PFPinCodeViewModel;
 
-public class PinActivity extends AppCompatActivity {
+public class PinActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +27,14 @@ public class PinActivity extends AppCompatActivity {
     private final PFLockScreenFragment.OnPFLockScreenCodeCreateListener mCodeCreateListener = new PFLockScreenFragment.OnPFLockScreenCodeCreateListener() {
         @Override
         public void onCodeCreated(String encodedCode) {
-            Toast.makeText(PinActivity.this, getString(R.string.pin_defined), Toast.LENGTH_SHORT).show();
-            SharedPreferencesSettings.saveToPref(PinActivity.this, encodedCode);
+            Toast.makeText(PinActivity2.this, getString(R.string.pin_defined), Toast.LENGTH_SHORT).show();
+            SharedPreferencesSettings.saveToPref(PinActivity2.this, encodedCode);
             showLockScreenFragment();
         }
 
-       //@Override
+        //@Override
         public void onNewCodeValidationFailed() {
-            Toast.makeText(PinActivity.this, getString(R.string.code_definition_error), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PinActivity2.this, getString(R.string.code_definition_error), Toast.LENGTH_SHORT).show();
         }
     };
 
@@ -43,30 +43,30 @@ public class PinActivity extends AppCompatActivity {
     private final PFLockScreenFragment.OnPFLockScreenLoginListener mLoginListener = new PFLockScreenFragment.OnPFLockScreenLoginListener() {
         @Override
         public void onCodeInputSuccessful() {
-            Toast.makeText(PinActivity.this, getString(R.string.code_success_welcome), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PinActivity2.this, getString(R.string.code_success_welcome), Toast.LENGTH_SHORT).show();
             showMainFragment();
 
-            Intent intent2 = new Intent(getApplicationContext(), /*GestaoUtilizadoresActivity*/GestaoUtilizadoresActivity.class); //
+            Intent intent2 = new Intent(getApplicationContext(), /*GestaoUtilizadoresActivity*/DefinitionsActivity.class); //
             startActivity(intent2);
 
         }
 
         @Override
         public void onFingerprintSuccessful() {
-            Toast.makeText(PinActivity.this, getString(R.string.fingerprint_welcome), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PinActivity2.this, getString(R.string.fingerprint_welcome), Toast.LENGTH_SHORT).show();
             showMainFragment();
-            Intent intent2 = new Intent(getApplicationContext(), GestaoUtilizadoresActivity.class);
-           startActivity(intent2);
+            Intent intent2 = new Intent(getApplicationContext(), DefinitionsActivity.class);
+            startActivity(intent2);
         }
 
         @Override
         public void onPinLoginFailed() {
-            Toast.makeText(PinActivity.this, getString(R.string.pin_failed), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PinActivity2.this, getString(R.string.pin_failed), Toast.LENGTH_SHORT).show();
         }
 
         @Override
         public void onFingerprintLoginFailed() {
-            Toast.makeText(PinActivity.this, getString(R.string.fingerprint_failed), Toast.LENGTH_SHORT).show();
+            Toast.makeText(PinActivity2.this, getString(R.string.fingerprint_failed), Toast.LENGTH_SHORT).show();
         }
     };
 
@@ -80,7 +80,7 @@ public class PinActivity extends AppCompatActivity {
                             return;
                         }
                         if (result.getError() != null) {
-                            Toast.makeText(PinActivity.this, getString(R.string.can_not_get_pin_info), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(PinActivity2.this, getString(R.string.can_not_get_pin_info), Toast.LENGTH_SHORT).show();
                             return;
                         }
                         showLockScreenFragment(result.getResult());
@@ -99,10 +99,10 @@ public class PinActivity extends AppCompatActivity {
                 .setLeftButton(getString(R.string.recover_PIN));
         final PFLockScreenFragment fragment = new PFLockScreenFragment();
 
-       fragment.setOnLeftButtonClickListener(new View.OnClickListener() {
+        fragment.setOnLeftButtonClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PinActivity.this, "Left button pressed", Toast.LENGTH_LONG).show();
+                Toast.makeText(PinActivity2.this, "Left button pressed", Toast.LENGTH_LONG).show();
                 //ABRIR ACTIVITY PARA RECUPERAR PIN através de SMS
             }
         });
@@ -130,5 +130,4 @@ public class PinActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){}
-
 }

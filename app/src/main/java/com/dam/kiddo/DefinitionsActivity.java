@@ -57,7 +57,13 @@ public class DefinitionsActivity extends AppCompatActivity {
 
     public void voltarMainActivity(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), GestaoUtilizadoresActivity.class);
+        Intent intent1 = new Intent(getApplicationContext(), PinActivity2.class);
+        startActivity(intent1);
+    }
+
+    public void irDefinicoes(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), PinActivity2.class);
         startActivity(intent1);
     }
 
