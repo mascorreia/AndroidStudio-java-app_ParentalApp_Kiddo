@@ -169,6 +169,13 @@ public class LauncherAppsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void jogar(View view){
+
+        /*Intent intent = new Intent(getApplicationContext(), PinActivity2.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);*/
+    }
+
 
 
     @Override

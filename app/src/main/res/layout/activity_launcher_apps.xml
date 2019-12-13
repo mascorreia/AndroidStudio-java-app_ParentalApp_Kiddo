@@ -41,6 +41,16 @@
         android:layout_height="495dp"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/button_jogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jogo do galo"
+            android:layout_gravity="center"
+            android:onClick="jogar"
+            android:textColor="@color/white_selector_pf"
+            android:background="@drawable/rounded_button_time"/>
+
         <ListView
             android:id="@+id/installed_app_list"
             android:layout_width="match_parent"
@@ -59,14 +69,6 @@
         android:layout_width="match_parent"
         android:layout_height="71dp"
         android:orientation="vertical" />
-
-    <!--<ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="230dp"
-        android:layout_height="55dp"
-        android:onClick="voltarDefinicoes"
-        android:paddingLeft="20dip"
-        app:srcCompat="@drawable/btn_definicoes" />-->
 
     <ImageView
         android:id="@+id/imageView3"
