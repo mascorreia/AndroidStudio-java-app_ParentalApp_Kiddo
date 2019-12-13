@@ -28,17 +28,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="355dp"
-        android:layout_marginBottom="589dp"
         android:contentDescription="voltar"
         android:onClick="voltarDefinicoes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095"
         app:srcCompat="@mipmap/voltar_atras" />
 
     <TextView
@@ -65,11 +62,76 @@
         android:id="@+id/btn_confirm_apps"
         android:layout_width="117dp"
         android:layout_height="48dp"
-        android:layout_marginStart="280dp"
         android:layout_marginEnd="14dp"
+        android:layout_marginBottom="16dp"
         android:text="Gravar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968" />
+
+    <!--<FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="313dp"
+        android:layout_height="485dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ListView
+            android:id="@+id/installed_app_list_gest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="80dip"
+            android:paddingTop="40dip"
+            android:paddingRight="80dip"
+            android:paddingBottom="70dp"
+            android:textSize="18sp">
+
+        </ListView>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sharebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:elevation="6dp"
+            app:fabSize="normal"
+
+            app:srcCompat="@android:drawable/ic_menu_share" />
+
+
+    </FrameLayout>-->
+
+    <LinearLayout
+        android:layout_width="267dp"
+        android:layout_height="359dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/installed_app_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="80dip"
+            android:paddingTop="40dip"
+            android:paddingRight="80dip"
+            android:paddingBottom="70dp"
+            android:textSize="18sp">
+
+        </ListView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
